@@ -12,6 +12,11 @@ Idea stolen from here: https://stackoverflow.com/questions/27610249/intellij-ide
       -  In the **Plugins** dialog, click ![The cogwheel](https://www.jetbrains.com/help/img/idea/2018.3/artwork.studio.icons.logcat.toolbar.settings@2x.png) icon and then click **Install Plugin from Disk**.
       -  Select the plugin archive file and click **OK**.
       -  Click **OK** to apply the changes and restart the IDE if prompted.
+ 3. Reconfigure keyboard shortcuts to use actions from this plugin: 
+      -  You can read [here](https://www.jetbrains.com/help/idea/configuring-keyboard-and-mouse-shortcuts.html) how to reconfigure they keymap.
+      -  The actions of this plugin are called **Partial Page Down** and **Partial Page Up**.
+      -  What percentage of the screen is scrolled every time you use the action is configurable in the **Partial Navigation** settings page.
+      -  (Optional) Go crazy and set the multiplier to 1.5: that's 1.5 screens per key press.
 
 ## License
 
