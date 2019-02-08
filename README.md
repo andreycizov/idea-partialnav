@@ -5,7 +5,12 @@ A plugin that allows one to set how many multiples of the screen each PageDown/P
 Idea stolen from here: https://stackoverflow.com/questions/27610249/intellij-idea-control-page-up-page-down-scroll-size
 
 ## Installation
+The plugin is now in [IntelliJ IDEA plugin repository](https://plugins.jetbrains.com/plugin/11952-partial-navigation/).
 
+1. Go to **Settings/Plugins**.
+2. Search for "Partial Navigation".
+ 
+## Installation from last source
  1.  Download the latest .jar from the [releases](https://github.com/andreycizov/idea-partialnav/releases) section.
  2.  Use the steps from "Install plugin from disk" section [here](https://www.jetbrains.com/help/idea/managing-plugins.html):
       -  In the **Settings/Preferences** dialog (`Ctrl+Alt+S`), select **Plugins**.
