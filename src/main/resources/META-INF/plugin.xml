@@ -1,20 +1,11 @@
 <idea-plugin>
     <id>com.andreycizov.partialnav</id>
     <name>Partial Navigation</name>
-    <version>1.0</version>
     <vendor email="acizov@gmail.com" url="https://andreycizov.github.io/">Andrey Cizov</vendor>
 
     <description><![CDATA[
       Partial PageUp and PageDown navigation plugin
     ]]></description>
-
-    <change-notes><![CDATA[
-      1.0: build the plugin for the first time
-    ]]>
-    </change-notes>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
