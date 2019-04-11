@@ -19,13 +19,16 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version 'IC-2016.3' //IntelliJ IDEA 2016.3 dependency; for a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
+    version 'IC-171.1834.9' //IntelliJ IDEA 2017.1 dependency; for a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
     pluginName 'idea-partialnav'
 }
 patchPluginXml {
     // please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description
+    sinceBuild 'IC-171.1834.9'
+    untilBuild 'IC-2019.1'
     changeNotes """
       <ul>
+      <li>Version 1.1: support partial page up/down with selection</li>
       <li>Version 1.0: build the plugin for the first time</li>
       </ul>
       """

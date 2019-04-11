@@ -21,7 +21,11 @@ The plugin is now in [IntelliJ IDEA plugin repository](https://plugins.jetbrains
 ## Configuration
 1.  To reconfigure keyboard shortcuts to use actions from this plugin: 
       -  You can read [here](https://www.jetbrains.com/help/idea/configuring-keyboard-and-mouse-shortcuts.html) how to reconfigure they keymap.
-      -  The actions of this plugin are called **Partial Page Down** and **Partial Page Up**.
+      -  The actions of this plugin are:
+          - **Partial Page Down** - `Page Down`
+          - **Partial Page Down with Selection** - `Shift` + `Page Down`
+          - **Partial Page Up** - `Page Up`
+          - **Partial Page Up with Selection** - `Shift` + `Page Up`
       -  What percentage of the screen is scrolled every time you use the action is configurable in the **Partial Navigation** settings page.
       -  (Optional) Go crazy and set the multiplier to 1.5: that's 1.5 screens per key press.
 

@@ -2,7 +2,6 @@ package com.andreycizov.partialnav;
 
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.options.Configurable;
-import com.intellij.openapi.options.ConfigurationException;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,10 +16,6 @@ public class PartialNavConfigurable implements Configurable {
     @Override
     public String getDisplayName() {
         return "Partial Navigation";
-    }
-
-    public boolean isModified() {
-        return true;
     }
 
     @Nullable
@@ -41,7 +36,7 @@ public class PartialNavConfigurable implements Configurable {
     }
 
     @Override
-    public void apply() throws ConfigurationException {
+    public void apply() {
         String pageUpMult = (String) comboPageUpMult.getSelectedItem();
         String pageDownMult = (String) comboPageDownMult.getSelectedItem();
 
@@ -50,5 +45,29 @@ public class PartialNavConfigurable implements Configurable {
 
         PropertiesComponent.getInstance().setValue(PartialPageUpAction.propertyName, fPageUpMult, PartialPageUpAction.propertyDefault);
         PropertiesComponent.getInstance().setValue(PartialPageDownAction.propertyName, fPageDownMult, PartialPageDownAction.propertyDefault);
+    }
+
+    @Override
+    public boolean isModified() {
+        float a = PropertiesComponent.getInstance().getFloat(PartialPageUpAction.propertyName, PartialPageUpAction.propertyDefault);
+        float b = PropertiesComponent.getInstance().getFloat(PartialPageDownAction.propertyName, PartialPageDownAction.propertyDefault);
+
+        String pageUpMult = (String) comboPageUpMult.getSelectedItem();
+        String pageDownMult = (String) comboPageDownMult.getSelectedItem();
+        if (pageUpMult == null || pageDownMult == null) {
+            return true;
+        }
+        float fPageUpMult = Float.parseFloat(pageUpMult);
+        float fPageDownMult = Float.parseFloat(pageDownMult);
+
+        return a != fPageUpMult || b != fPageDownMult;
+    }
+
+    @Override
+    public void reset() {
+        float a = PropertiesComponent.getInstance().getFloat(PartialPageUpAction.propertyName, PartialPageUpAction.propertyDefault);
+        float b = PropertiesComponent.getInstance().getFloat(PartialPageDownAction.propertyName, PartialPageDownAction.propertyDefault);
+        comboPageUpMult.setSelectedItem(Float.toString(a));
+        comboPageDownMult.setSelectedItem(Float.toString(b));
     }
 }

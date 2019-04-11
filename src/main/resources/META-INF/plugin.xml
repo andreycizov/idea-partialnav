@@ -21,6 +21,9 @@
                 text="Partial Page _Up" description="Navigate a part of the screen up"/>
         <action id="PartialPageNav.PageDown" class="com.andreycizov.partialnav.PartialPageDownAction"
                 text="Partial Page _Down" description="Navigate a part of the screen down"/>
+        <action id="PartialPageNav.PageUpWithSelection" class="com.andreycizov.partialnav.PartialPageUpWithSelectionAction"
+                text="Partial Page _Up with Selection" description="Navigate a part of the screen up with selection"/>
+        <action id="PartialPageNav.PageDownWithSelection" class="com.andreycizov.partialnav.PartialPageDownWithSelectionAction"
+                text="Partial Page _Down with Selection" description="Navigate a part of the screen down with selection"/>
     </actions>
-
 </idea-plugin>
