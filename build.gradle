@@ -28,7 +28,7 @@ patchPluginXml {
     untilBuild 'IC-2019.1'
     changeNotes """
       <ul>
-      <li>Version 1.1: support partial page up/down with selection</li>
+      <li>Version 1.1: support partial page up/down with selection, set default keyboard shortcuts</li>
       <li>Version 1.0: build the plugin for the first time</li>
       </ul>
       """

@@ -17,12 +17,20 @@
 
     <actions>
         <action id="PartialPageNav.PageUp" class="com.andreycizov.partialnav.PartialPageUpAction"
-                text="Partial Page _Up" description="Navigate a part of the screen up"/>
+                text="Partial Page _Up" description="Navigate a part of the screen up">
+            <keyboard-shortcut keymap="$default" first-keystroke="PAGE_UP" replace-all="true"/>
+        </action>
         <action id="PartialPageNav.PageDown" class="com.andreycizov.partialnav.PartialPageDownAction"
-                text="Partial Page _Down" description="Navigate a part of the screen down"/>
+                text="Partial Page _Down" description="Navigate a part of the screen down">
+            <keyboard-shortcut keymap="$default" first-keystroke="PAGE_DOWN" replace-all="true"/>
+        </action>
         <action id="PartialPageNav.PageUpWithSelection" class="com.andreycizov.partialnav.PartialPageUpWithSelectionAction"
-                text="Partial Page _Up with Selection" description="Navigate a part of the screen up with selection"/>
+                text="Partial Page _Up with Selection" description="Navigate a part of the screen up with selection">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift PAGE_UP" replace-all="true"/>
+        </action>
         <action id="PartialPageNav.PageDownWithSelection" class="com.andreycizov.partialnav.PartialPageDownWithSelectionAction"
-                text="Partial Page _Down with Selection" description="Navigate a part of the screen down with selection"/>
+                text="Partial Page _Down with Selection" description="Navigate a part of the screen down with selection">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift PAGE_DOWN" replace-all="true"/>
+        </action>
     </actions>
 </idea-plugin>
