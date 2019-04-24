@@ -1,10 +1,18 @@
 <idea-plugin>
     <id>com.andreycizov.partialnav</id>
     <name>Partial Navigation</name>
-    <vendor email="acizov@gmail.com" url="https://andreycizov.github.io/">Andrey Cizov</vendor>
+    <vendor email="acizov@gmail.com" url="https://github.com/andreycizov/idea-partialnav">Andrey Cizov</vendor>
 
     <description><![CDATA[
-      Partial PageUp and PageDown navigation plugin
+      <p>Partial PageUp and PageDown navigation plugin.</p>
+
+      <p>Please note that while this plugin by default sets up the default (Page Up/Page Down) shortcuts to enable it's
+      actions, it can't override the default actions by itself.</p>
+
+      <p>For it to work, you'd need to go to keymap and disable the usual "Page Up" and "Page Down" shortcuts. Simply
+      remove them and you're good to go.</p>
+
+      <p>You can configure the scroll length in "Partial Navigation" configuration page.</p>
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
