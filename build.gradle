@@ -21,6 +21,12 @@ dependencies {
 intellij {
     version 'IC-171.1834.9' //IntelliJ IDEA 2017.1 dependency; for a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
     pluginName 'idea-partialnav'
+
+    publishPlugin {
+        username System.getProperty('ij_plugin_portal_login')
+        password System.getProperty('ij_plugin_portal_password')
+        channels 'eap', 'nightly', 'default'
+    }
 }
 patchPluginXml {
     // please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description
