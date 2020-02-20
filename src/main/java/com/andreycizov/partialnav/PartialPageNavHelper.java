@@ -19,7 +19,10 @@ public class PartialPageNavHelper {
         int lineHeight = editor.getLineHeight();
         Rectangle visibleArea = getVisibleArea(editor);
         int linesIncrement = (int) (visibleArea.height / lineHeight * mult);
-        editor.getScrollingModel().scrollVertically(visibleArea.y - visibleArea.y % lineHeight - linesIncrement * lineHeight);
+        if (!editor.getSettings().isRefrainFromScrolling()) {
+            int scrollOffset = visibleArea.y - visibleArea.y % lineHeight - linesIncrement * lineHeight;
+            editor.getScrollingModel().scrollVertically(scrollOffset);
+        }
         int lineShift = -linesIncrement;
         editor.getCaretModel().moveCaretRelatively(0, lineShift, isWithSelection, editor.isColumnMode(), true);
     }
@@ -30,8 +33,10 @@ public class PartialPageNavHelper {
         Rectangle visibleArea = getVisibleArea(editor);
         int linesIncrement = (int) (visibleArea.height / lineHeight * mult);
         int allowedBottom = ((EditorEx) editor).getContentSize().height - visibleArea.height;
-        editor.getScrollingModel().scrollVertically(
-                Math.min(allowedBottom, visibleArea.y - visibleArea.y % lineHeight + linesIncrement * lineHeight));
+        if (!editor.getSettings().isRefrainFromScrolling()) {
+            int scrollOffset = Math.min(allowedBottom, visibleArea.y - visibleArea.y % lineHeight + linesIncrement * lineHeight);
+            editor.getScrollingModel().scrollVertically(scrollOffset);
+        }
         editor.getCaretModel().moveCaretRelatively(0, linesIncrement, isWithSelection, editor.isColumnMode(), true);
     }
 }
