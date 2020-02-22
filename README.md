@@ -1,6 +1,6 @@
 # Partial Navigation
 
-A plugin that allows one to set how many multiples of the screen each PageDown/PageUp button push scrolls.
+A plugin that allows one to set how many lines each Page Up/Down button push move the caret
 
 Idea stolen from here: https://stackoverflow.com/questions/27610249/intellij-idea-control-page-up-page-down-scroll-size
 
@@ -19,15 +19,17 @@ The plugin is now in [IntelliJ IDEA plugin repository](https://plugins.jetbrains
       -  Click **OK** to apply the changes and restart the IDE if prompted.
 
 ## Configuration
-1.  To reconfigure keyboard shortcuts to use actions from this plugin: 
-      -  You can read [here](https://www.jetbrains.com/help/idea/configuring-keyboard-and-mouse-shortcuts.html) how to reconfigure they keymap.
-      -  The actions of this plugin are:
-          - **Partial Page Down** - `Page Down`
-          - **Partial Page Down with Selection** - `Shift` + `Page Down`
-          - **Partial Page Up** - `Page Up`
-          - **Partial Page Up with Selection** - `Shift` + `Page Up`
-      -  What percentage of the screen is scrolled every time you use the action is configurable in the **Partial Navigation** settings page.
-      -  (Optional) Go crazy and set the multiplier to 1.5: that's 1.5 screens per key press.
+To reconfigure keyboard shortcuts to use actions from this plugin: 
+   -  You can read [here](https://www.jetbrains.com/help/idea/configuring-keyboard-and-mouse-shortcuts.html) how to reconfigure they keymap.
+   -  The actions of this plugin are:
+       - **Partial Page Down** - `Page Down`
+       - **Partial Page Down with Selection** - `Shift` + `Page Down`
+       - **Partial Page Up** - `Page Up`
+       - **Partial Page Up with Selection** - `Shift` + `Page Up`
+   -  On **Partial Navigation** settings page you can specify the number of lines the Page Up/Down should move the caret
+   is in percentage of the screen with **Percent navigation** or specific number of lines with **Static navigation** 
+   -  (Optional) Go crazy and set the multiplier to 1.5: that's 1.5 screens per key press.
+
 
 ## License
 
