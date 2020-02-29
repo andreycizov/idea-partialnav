@@ -9,8 +9,13 @@ import org.jetbrains.annotations.NotNull;
 
 
 public class PartialPageUpAction extends EditorAction {
-    static String propertyName = "com.andreycizov.partialpagenav.mult.up";
-    static float propertyDefault = (float) 1.0;
+    static String multPropertyName = "com.andreycizov.partialpagenav.mult.up";
+    static float multPropertyDefault = (float) 1.0;
+    static String staticPropertyName = "com.andreycizov.partialpagenav.stat.up";
+    static int staticPropertyDefault = 80;
+    static String navigationTypePropertyName = "com.andreycizov.partialpagenav.nav.type";
+    static String MULT = "mult";
+    static String STATIC = "static";
 
     public static class Handler extends EditorActionHandler {
         public Handler() {
@@ -19,10 +24,13 @@ public class PartialPageUpAction extends EditorAction {
 
         @Override
         public void execute(@NotNull Editor editor, DataContext dataContext) {
+            PropertiesComponent prop = PropertiesComponent.getInstance();
             PartialPageNavHelper.moveCaretPageUp(
                     editor,
                     false,
-                    PropertiesComponent.getInstance().getFloat(propertyName, propertyDefault)
+                    prop.getFloat(multPropertyName, multPropertyDefault),
+                    prop.getInt(staticPropertyName, staticPropertyDefault),
+                    prop.getValue(navigationTypePropertyName, MULT)
             );
         }
 

@@ -9,8 +9,13 @@ import org.jetbrains.annotations.NotNull;
 
 
 public class PartialPageDownWithSelectionAction extends EditorAction {
-    static String propertyName = "com.andreycizov.partialpagenav.mult.down";
-    static float propertyDefault = (float) 1.0;
+    static String multPropertyName = "com.andreycizov.partialpagenav.mult.down";
+    static float multPropertyDefault = (float) 1.0;
+    static String staticPropertyName = "com.andreycizov.partialpagenav.stat.down";
+    static int staticPropertyDefault = 80;
+    static String navigationTypePropertyName = "com.andreycizov.partialpagenav.nav.type";
+    static String MULT = "mult";
+    static String STATIC = "static";
 
     public static class Handler extends EditorActionHandler {
         public Handler() {
@@ -19,10 +24,13 @@ public class PartialPageDownWithSelectionAction extends EditorAction {
 
         @Override
         public void execute(@NotNull Editor editor, DataContext dataContext) {
+            PropertiesComponent prop = PropertiesComponent.getInstance();
             PartialPageNavHelper.moveCaretPageDown(
                     editor,
                     true,
-                    PropertiesComponent.getInstance().getFloat(propertyName, propertyDefault)
+                    prop.getFloat(multPropertyName, multPropertyDefault),
+                    prop.getInt(staticPropertyName, staticPropertyDefault),
+                    prop.getValue(navigationTypePropertyName, MULT)
             );
         }
 
