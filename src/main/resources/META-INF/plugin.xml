@@ -4,7 +4,7 @@
     <vendor email="acizov@gmail.com" url="https://github.com/andreycizov/idea-partialnav">Andrey Cizov</vendor>
 
     <idea-version since-build="IC-171.1834.9" />
-    
+
     <description><![CDATA[
       <p>Partial PageUp and PageDown navigation plugin.</p>
 

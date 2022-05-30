@@ -3,6 +3,7 @@ package com.andreycizov.partialnav;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.ex.EditorEx;
 import com.intellij.util.SystemProperties;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
@@ -12,7 +13,7 @@ public class PartialPageNavHelper {
     static String STATIC = "static";
     //  https://github.com/JetBrains/intellij-community/blob/9c78db8af09c69c7aba7268c650449dd423422e2/platform/platform-impl/src/com/intellij/openapi/editor/actions/EditorActionUtil.java#L791
     static Rectangle getVisibleArea(@NotNull Editor editor) {
-        return SystemProperties.isTrueSmoothScrollingEnabled() ? editor.getScrollingModel().getVisibleAreaOnScrollingFinished()
+        return SystemProperties.getBooleanProperty("TrueSmoothScrollingEnabled" , false) ? editor.getScrollingModel().getVisibleAreaOnScrollingFinished()
                 : editor.getScrollingModel().getVisibleArea();
     }
 
