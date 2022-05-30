@@ -1,9 +1,9 @@
 # Partial Navigation
-
+<!-- Plugin description -->
 A plugin that allows one to set how many lines each Page Up/Down button push move the caret
 
 Idea stolen from here: https://stackoverflow.com/questions/27610249/intellij-idea-control-page-up-page-down-scroll-size
-
+<!-- Plugin description end -->
 ## Installation
 The plugin is now in [IntelliJ IDEA plugin repository](https://plugins.jetbrains.com/plugin/11952-partial-navigation/).
 
