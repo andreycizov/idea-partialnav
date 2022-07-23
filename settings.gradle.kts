@@ -1,0 +1,1 @@
+rootProject.name = "si.mmm.intellij.plugin.Partial"

@@ -6,7 +6,6 @@ import com.intellij.openapi.options.Configurable;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.Spacer;
-import com.intellij.uiDesigner.lw.LwVSpacer;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
 
@@ -42,13 +41,34 @@ public class PartialNavConfigurable implements Configurable {
         group.add(staticNavigationRadioButton);
 
         Vector<String> multipliers = new Vector<String>();
+        multipliers.add("0.05");
         multipliers.add("0.1");
         multipliers.add("0.15");
+        multipliers.add("0.20");
         multipliers.add("0.25");
+        multipliers.add("0.35");
+        multipliers.add("0.45");
         multipliers.add("0.5");
+        multipliers.add("0.55");
+        multipliers.add("0.60");
+        multipliers.add("0.65");
+        multipliers.add("0.70");
         multipliers.add("0.75");
+        multipliers.add("0.80");
+        multipliers.add("0.85");
+        multipliers.add("0.90");
+        multipliers.add("0.95");
         multipliers.add("1");
+        multipliers.add("1.05");
+        multipliers.add("1.1");
+        multipliers.add("1.15");
+        multipliers.add("1.2");
         multipliers.add("1.25");
+        multipliers.add("1.25");
+        multipliers.add("1.30");
+        multipliers.add("1.35");
+        multipliers.add("1.40");
+        multipliers.add("1.45");
         multipliers.add("1.5");
 
         comboPageUpMult = new JComboBox<String>(multipliers);
